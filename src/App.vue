@@ -16,6 +16,7 @@
 </template>
 
 <script>
+/*eslint no-mixed-spaces-and-tabs: ["error", "smart-tabs"]*/
 
 import { router } from '@/main';
 import { mapActions } from 'vuex';
