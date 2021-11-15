@@ -2,8 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import Router from 'vue-router'
 
-import TodoList from '@/components/TodoList'
-import TodoInput from '@/components/TodoInput'
+import List from '@/pages/list'
+import Detail from '@/pages/detail'
 import store from '/src/store/index.ts';
 
 Vue.use(Router)
@@ -12,16 +12,16 @@ Vue.config.productionTip = false
 const routes = [
     {
         path: '/',
-        redirect: '/TodoList'
+        redirect: '/list'
     },
     {
-        path: '/TodoList', name: 'TodoList', component: TodoList
+        path: '/list', name: 'list', component: List
     },
     {
-        path: '/TodoInput/:id', name: 'TodoInput', component: TodoInput, props: true
+        path: '/detail/:id', name: 'detail', component: Detail, props: true
     },
     {
-        path: '/TodoInput', name: 'TodoInput', component: TodoInput, props: true
+        path: '/detail', name: 'detail', component: Detail, props: true
     }
 ]
 
